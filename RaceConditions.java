@@ -13,8 +13,8 @@ public class RaceConditions
     static int k;
     static int t;
 
-    static int next_in = 0;
-    static int next_out = 0;
+    static int next_in = 0;  //for producer
+    static int next_out = 0;    //for consumer
 
     public static void main(String[] args) throws InterruptedException
     {
