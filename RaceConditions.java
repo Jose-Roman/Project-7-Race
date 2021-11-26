@@ -1,4 +1,7 @@
-
+//Jose Roman
+//Project 7 Race Conditions
+//Sec 11.3 
+//Dec 16 2021
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
