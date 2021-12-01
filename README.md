@@ -1,5 +1,10 @@
 # Project-7-Race
 
+
+Part 1: RaceConditions.java
+Part 2: PVoperations.java
+
+Youtube Link:
 https://youtu.be/66uRWlEYMMI
 
 
