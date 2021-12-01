@@ -112,8 +112,10 @@ public class PVoperations
             }
 
           V.release(e);            //V operation
+
+          next_out += (k2 % n);
+          System.out.println("No race condition");
         }
-        next_out += (k2 % n);
-        System.out.println("No race condition");
+       
     }
 }
