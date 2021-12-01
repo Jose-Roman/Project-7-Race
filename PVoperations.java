@@ -97,6 +97,7 @@ public class PVoperations
 
     //consumer
     public static void consumer() throws InterruptedException {
+        while(true){
         int t2 = ThreadLocalRandom.current().nextInt(0, t );
         System.out.println("Consumer: Sleep for " + t2 + " seconds");
         TimeUnit.SECONDS.sleep(t2);     //sleep
@@ -117,5 +118,6 @@ public class PVoperations
           System.out.println("No race condition");
         }
        
+    }
     }
 }
