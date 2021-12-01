@@ -67,7 +67,7 @@ public class RaceConditions
             c.join();       //join consumer
 
     }
-    public static void producer() throws InterruptedException {
+     public static void producer() throws InterruptedException {
         //producer
 
         while(true)
@@ -75,11 +75,11 @@ public class RaceConditions
             int k1 = ThreadLocalRandom.current().nextInt(0, k);
             for(int i = 0; i < k1;i++)
             {
-                buffer[(next_in + k1) % n] = 1;
+                buffer[(next_in + i) % n] += 1;
             }
             next_in += (k1 % n);
             int t1 = ThreadLocalRandom.current().nextInt(0, t);
-           System.out.println("Producer: Sleep for " + t1 + " seconds");
+            System.out.println("Producer: Sleep for " + t1 + " seconds");
             TimeUnit.SECONDS.sleep(t1);
         }
     }
@@ -93,9 +93,9 @@ public class RaceConditions
             int k2 = ThreadLocalRandom.current().nextInt(0, k);
             for(int i = 0; i < k2;i++)
             {
-                int data = buffer[(next_out + k2) % n];
-                //System.out.println("Data: " + data);
-                if(data >= 1){
+                int data = buffer[(next_out + i) % n];
+
+                if(data > 1){
                     System.out.println("RACE CONDITION");
                     //System.out.println(Arrays.toString(buffer));
                     System.exit(1);
